@@ -2,6 +2,9 @@
 
 An OWL ontology describing the world of multi-seller online shops for electronic parts, based on the structure of the [Vendure commerce system](https://vendure.io/).
 
+![Protege Diagram](./diagram.png)
+
+
 ## Features
 
 * Shows the main things in e-commerce (like products, orders, customers) and how they connect, following Vendure's design.
