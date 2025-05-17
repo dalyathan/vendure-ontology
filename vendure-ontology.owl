@@ -1,0 +1,1251 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:eco="http://www.highwayelectronics.com/ontologies/ecommerce.owl#">
+
+    <owl:Ontology rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl">
+        <owl:versionIRI rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl/1.8"/> </owl:Ontology>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Agent"/>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Agent"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#HighwayElectronics">
+        <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Organization"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Seller">
+        <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Organization"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentProvider">
+        <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Organization"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Person">
+        <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Agent"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Customer">
+        <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Person"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#User">
+      <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Agent"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Administrator">
+      <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#User"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Product">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Collection">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Facet">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#FacetValue">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Asset">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> </owl:Class>
+
+     <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#StockLocation">
+         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> </owl:Class>
+
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Address"/>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ShippingAddress">
+        <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Address"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BillingAddress">
+        <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Address"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#OrderLine"> <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/> </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Payment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentMethod"/>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Instamojo">
+        <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentMethod"/>
+    </owl:Class>
+     <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Stripe">
+        <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentMethod"/>
+    </owl:Class>
+     <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#AuthorizeNet">
+        <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentMethod"/>
+    </owl:Class>
+     <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Paypal">
+        <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentMethod"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BankTransferMethod">
+        <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentMethod"/>
+    </owl:Class>
+
+     <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Channel"/>
+
+     <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Fulfillment"/> <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ShippingMethod"> <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+     </owl:Class>
+
+     <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Promotion"/> <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Role"/> <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasCustomer">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+        <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Customer"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hostsSeller">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#HighwayElectronics"/>
+        <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Seller"/>
+    </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#managesChannel">
+       <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Seller"/>
+       <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Channel"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#managesChannelOnPlatform">
+       <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#HighwayElectronics"/>
+       <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Channel"/>
+     </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#supportsPaymentProvider">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#HighwayElectronics"/>
+        <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentProvider"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasVariant">
+      <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Product"/>
+      <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+    </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#refersToVariant"> <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#OrderLine"/>
+       <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+     </owl:ObjectProperty>
+
+
+    <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#containsItem"> <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+        <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#OrderLine"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasShippingAddressDetails">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+        <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ShippingAddress"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasBillingAddressDetails">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+        <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BillingAddress"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPayment">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+        <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Payment"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#isPaymentForOrder">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPayment"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#usesPaymentMethod">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Payment"/>
+        <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentMethod"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasDefaultShippingAddress">
+      <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Customer"/>
+      <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Address"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasDefaultBillingAddress">
+      <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Customer"/>
+      <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Address"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasSavedAddress">
+      <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Customer"/>
+      <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Address"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#belongsToChannel">
+      <rdfs:domain> <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Asset"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Collection"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Customer"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Facet"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#FacetValue"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#OrderLine"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentMethod"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Product"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ShippingMethod"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#StockLocation"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Promotion"/> <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Role"/> </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+      <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Channel"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#associatedWithUser">
+      <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Customer"/>
+      <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#User"/>
+    </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasCollection">
+       <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Product"/>
+       <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Collection"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasFacet">
+       <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Facet"/>
+       <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#FacetValue"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasFacetValue">
+       <rdfs:domain> <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Product"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Collection"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Asset"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#StockLocation"/>
+                    <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Customer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+       <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#FacetValue"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasAsset">
+       <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Product"/> <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Asset"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#availableAtStockLocation">
+       <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+       <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#StockLocation"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#isVariantOfProduct">
+       <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+       <owl:inverseOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasVariant"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#isValueOfFacet">
+       <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+       <owl:inverseOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasFacet"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#managedBySeller">
+       <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Channel"/>
+       <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Seller"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#isFulfilledBy">
+       <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+       <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Fulfillment"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#fulfillsOrder">
+       <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+       <owl:inverseOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#isFulfilledBy"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#shipsToAddress">
+       <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Fulfillment"/>
+       <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ShippingAddress"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#handledByShippingMethod">
+       <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Fulfillment"/>
+       <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ShippingMethod"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#isPartOfOrder"> <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+       <owl:inverseOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#containsItem"/>
+     </owl:ObjectProperty>
+
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasSelectedShippingMethod">
+       <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+       <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ShippingMethod"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasSelectedPaymentMethod">
+       <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+       <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentMethod"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#includesVariant"> <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Collection"/>
+       <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+     </owl:ObjectProperty>
+
+     <owl:ObjectProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#includesProduct"> <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Collection"/>
+       <rdfs:range rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Product"/>
+     </owl:ObjectProperty>
+
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasProductName">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasProductDescription">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasSKU">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasCategory">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasOfferPrice">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasCurrency">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasStockQuantity">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasSellerProductId">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasOfferState">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasCustomerId">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Customer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasEmail">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Customer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasSellerId">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Seller"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasSellerName">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Seller"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPaymentProviderName">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentProvider"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPlatformName">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#HighwayElectronics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasOrderId">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasOrderDate">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasOrderStatus">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasTotalAmount">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasOrderItemId">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#OrderItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasQuantity">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#OrderLine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPriceAtTimeOfOrder">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#OrderLine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasStreetAddress">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasCity">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasStateProvince">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPostalCode">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasCountry">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPaymentAmount">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Payment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPaymentDate">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Payment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasTransactionId">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Payment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPaymentStatus">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Payment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasSlug">
+      <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasCode">
+      <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPreview">
+      <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Asset"/>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+     <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasName">
+       <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+     </owl:DatatypeProperty>
+
+     <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasTrackingCode">
+       <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Fulfillment"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+     </owl:DatatypeProperty>
+
+      <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasShippingDate">
+       <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Fulfillment"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+     </owl:DatatypeProperty>
+
+     <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasFulfillmentStatus">
+       <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Fulfillment"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+     </owl:DatatypeProperty>
+
+     <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasValue">
+        <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#FacetValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+     </owl:DatatypeProperty>
+
+     <owl:DatatypeProperty rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasOrderLineId"> <rdfs:domain rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#OrderLine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+     </owl:DatatypeProperty>
+
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasSKU"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasOfferPrice"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasCurrency"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#OrderLine"> <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/> <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#refersToVariant"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasQuantity"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPriceAtTimeOfOrder"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+         <rdfs:subClassOf> <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasOrderLineId"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasCustomer"/>
+                <owl:someValuesFrom rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Customer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf> <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#containsItem"/>
+                <owl:someValuesFrom rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#OrderLine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasShippingAddressDetails"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ShippingAddress"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasBillingAddressDetails"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BillingAddress"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPayment"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Payment"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#belongsToChannel"/>
+                <owl:someValuesFrom rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Channel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#isFulfilledBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Fulfillment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasSelectedShippingMethod"/>
+                <owl:someValuesFrom rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ShippingMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasSelectedPaymentMethod"/>
+                <owl:someValuesFrom rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Payment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#isPaymentForOrder"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#usesPaymentMethod"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentMethod"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPaymentAmount"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPaymentDate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasTransactionId"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPaymentStatus"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Address">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasStreetAddress"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasCity"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPostalCode"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Product">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasProductName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasSlug"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasVariant"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+     <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Channel">
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasSlug"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+     </owl:Class>
+
+     <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Collection">
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasSlug"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+     </owl:Class>
+
+     <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Facet">
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasSlug"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasFacet"/>
+                <owl:someValuesFrom rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#FacetValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+     </owl:Class>
+
+     <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#FacetValue">
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasCode"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+         <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#isValueOfFacet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Facet"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+     </owl:Class>
+
+     <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Asset">
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasPreview"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+     </owl:Class>
+
+     <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#StockLocation">
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasCode"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+     </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#User">
+      <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Agent"/>
+      <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasEmail"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+     <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Administrator">
+       <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#User"/>
+       <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+     </owl:Class>
+
+    <owl:Class rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Customer">
+      <rdfs:subClassOf rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Person"/>
+       <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasCustomerId"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#hasEmail"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#associatedWithUser"/>
+                <owl:someValuesFrom rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#User"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+    <owl:AllDisjointClasses>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Agent"/>
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Address"/>
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Payment"/>
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentMethod"/>
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Asset"/>
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#StockLocation"/>
+             <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Channel"/>
+             <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Fulfillment"/>
+             <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ShippingMethod"/>
+             <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Product"/>
+             <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+             <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Collection"/>
+             <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Facet"/>
+             <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#FacetValue"/>
+             <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+             <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#OrderLine"/> <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Promotion"/> <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Role"/> </owl:members>
+    </owl:AllDisjointClasses>
+
+
+    <owl:AllDisjointClasses>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Organization"/>
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Person"/>
+             <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#User"/>
+        </owl:members>
+    </owl:AllDisjointClasses>
+
+    <owl:AllDisjointClasses>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#HighwayElectronics"/>
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Seller"/>
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentProvider"/>
+        </owl:members>
+    </owl:AllDisjointClasses>
+
+    <owl:AllDisjointClasses>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ShippingAddress"/>
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BillingAddress"/>
+        </owl:members>
+    </owl:AllDisjointClasses>
+
+    <owl:AllDisjointClasses>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Instamojo"/>
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Stripe"/>
+             <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#AuthorizeNet"/>
+             <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Paypal"/>
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BankTransferMethod"/>
+        </owl:members>
+    </owl:AllDisjointClasses>
+
+     <owl:AllDisjointClasses>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Facet"/>
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#FacetValue"/>
+        </owl:members>
+    </owl:AllDisjointClasses>
+
+    <owl:AllDisjointClasses>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Customer"/>
+            <rdf:Description rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Administrator"/>
+        </owl:members>
+    </owl:AllDisjointClasses>
+
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#HighwayElectronicsCorp">
+        <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#HighwayElectronics"/>
+        <eco:hasPlatformName>Highway Electronics Platform</eco:hasPlatformName>
+         <eco:managesChannelOnPlatform rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+        <eco:supportsPaymentProvider rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Stripe"/>
+        <eco:supportsPaymentProvider rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#AuthorizeNet"/>
+        <eco:supportsPaymentProvider rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Instamojo"/>
+        <eco:supportsPaymentProvider rdf:resource="http://www.paypal.com/ontologies/paypal.owl#PayPal"/>
+        <eco:supportsPaymentProvider rdf:resource="http://www.acceptblue.com/ontologies/acceptblue.owl#AcceptBlue"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel">
+      <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Channel"/>
+       <eco:hasName>Default Sales Channel</eco:hasName>
+       <eco:hasSlug>default-channel</eco:hasSlug>
+       <eco:managedBySeller rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#HighwayElectronicsCorpSeller"/>
+       <eco:managesChannelOnPlatform rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#HighwayElectronicsCorp"/>
+        <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#HighwayElectronicsCorpSeller">
+      <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Seller"/>
+       <eco:hasSellerName>Highway Electronics</eco:hasSellerName>
+       <eco:hasSellerId>HE000</eco:hasSellerId>
+        <eco:managesChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#SidHarveyElectronic">
+        <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Seller"/>
+        <eco:hasSellerName>Sid Harvey Electronic</eco:hasSellerName>
+        <eco:hasSellerId>SHE1001</eco:hasSellerId>
+         <eco:managesChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#SidHarveyChannel"/>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#SidHarveyChannel">
+      <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Channel"/>
+       <eco:hasName>Sid Harvey Electronics Channel</eco:hasName>
+       <eco:hasSlug>sid-harvey</eco:hasSlug>
+        <eco:managesChannelOnPlatform rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#HighwayElectronicsCorp"/>
+        <eco:managedBySeller rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#SidHarveyElectronic"/>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#WyomingMechanicalSupply">
+        <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Seller"/>
+        <eco:hasSellerName>Wyoming Mechanical Supply</eco:hasSellerName>
+        <eco:hasSellerId>WMS2002</eco:hasSellerId>
+         <eco:managesChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#WyomingChannel"/>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#WyomingChannel">
+       <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Channel"/>
+       <eco:hasName>Wyoming Mechanical Supply Channel</eco:hasName>
+       <eco:hasSlug>wyoming</eco:hasSlug>
+        <eco:managesChannelOnPlatform rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#HighwayElectronicsCorp"/>
+         <eco:managedBySeller rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#WyomingMechanicalSupply"/>
+          <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BinghamtonHardwareHVACSupply">
+        <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Seller"/>
+        <eco:hasSellerName>Binghamton Hardware &amp; HVAC Supply</eco:hasSellerName>
+        <eco:hasSellerId>BHHS3003</eco:hasSellerId>
+         <eco:managesChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BinghamtonChannel"/>
+          <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BinghamtonChannel">
+       <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Channel"/>
+       <eco:hasName>Binghamton Hardware &amp; HVAC Supply Channel</eco:hasName>
+       <eco:hasSlug>binghamton</eco:hasSlug>
+       <eco:managesChannelOnPlatform rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#HighwayElectronicsCorp"/>
+       <eco:managedBySeller rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BinghamtonHardwareHVACSupply"/>
+        <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Stripe">
+        <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentProvider"/>
+        <eco:hasPaymentProviderName>Stripe</eco:hasPaymentProviderName>
+        <eco:hasCode>stripe</eco:hasCode>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#AuthorizeNet">
+        <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentProvider"/>
+        <eco:hasPaymentProviderName>Authorize.net</eco:hasPaymentProviderName>
+         <eco:hasCode>authorize-net</eco:hasCode>
+          <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Instamojo">
+        <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentProvider"/>
+        <eco:hasPaymentProviderName>Instamojo</eco:hasPaymentProviderName>
+        <eco:hasCode>instamojo</eco:hasCode>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.paypal.com/ontologies/paypal.owl#PayPal">
+        <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentProvider"/>
+        <eco:hasPaymentProviderName>PayPal</eco:hasPaymentProviderName>
+        <eco:hasCode>paypal</eco:hasCode>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.acceptblue.com/ontologies/acceptblue.owl#AcceptBlue">
+        <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaymentProvider"/>
+        <eco:hasPaymentProviderName>Accept Blue</eco:hasPaymentProviderName>
+        <eco:hasCode>accept-blue</eco:hasCode>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#InstamojoMethodInstance">
+       <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Instamojo"/>
+       <eco:hasCode>instamojo-method</eco:hasCode>
+        <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+      <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#StripeMethodInstance">
+       <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Stripe"/>
+       <eco:hasCode>stripe-method</eco:hasCode>
+        <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+      <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#AuthorizeNetMethodInstance">
+       <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#AuthorizeNet"/>
+       <eco:hasCode>authorizenet-method</eco:hasCode>
+        <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+      <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PaypalMethodInstance">
+       <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Paypal"/>
+       <eco:hasCode>paypal-method</eco:hasCode>
+        <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BankTransferMethodInstance">
+       <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BankTransferMethod"/>
+       <eco:hasCode>bank-transfer-method</eco:hasCode>
+        <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#FedExShippingMethodInstance"> <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ShippingMethod"/>
+       <eco:hasName>FedEx Ground</eco:hasName>
+       <eco:hasCode>fedex-ground</eco:hasCode>
+        <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#UPSShippingMethodInstance"> <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ShippingMethod"/>
+       <eco:hasName>UPS 2-Day Air</eco:hasName>
+       <eco:hasCode>ups-2day</eco:hasCode>
+        <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#CustomerJohnDoe">
+        <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Customer"/>
+        <eco:hasCustomerId>C12345</eco:hasCustomerId>
+        <eco:hasEmail>john.doe@example.com</eco:hasEmail>
+        <eco:hasShippingAddressDetails rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#JohnDoeHomeAddress"/>
+        <eco:hasBillingAddressDetails rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#JohnDoeHomeAddress"/>
+        <eco:hasSavedAddress rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#JohnDoeHomeAddress"/>
+         <eco:associatedWithUser rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#JohnDoeUser"/>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#JohnDoeUser">
+       <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#User"/>
+        <eco:hasEmail>john.doe@example.com</eco:hasEmail>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#JohnDoeHomeAddress">
+        <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Address"/>
+        <eco:hasStreetAddress>123 Main St</eco:hasStreetAddress>
+        <eco:hasCity>Anytown</eco:hasCity>
+        <eco:hasStateProvince>CA</eco:hasStateProvince>
+        <eco:hasPostalCode>91234</eco:hasPostalCode>
+        <eco:hasCountry>USA</eco:hasCountry>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Resistor10kOhmProduct">
+      <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Product"/>
+       <eco:hasProductName>Resistor 10k Ohm</eco:hasProductName>
+       <eco:hasSlug>resistor-10k-ohm</eco:hasSlug>
+       <eco:hasProductDescription>Standard 1/4W 10k Ohm Resistor</eco:hasProductDescription>
+       <eco:hasCategory>Passive Components</eco:hasCategory>
+       <eco:hasVariant rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Resistor10kOhmVariant"/>
+       <eco:hasCollection rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ElectronicsCollection"/>
+       <eco:hasFacetValue rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#SonyFacetValue"/>
+        <eco:hasAsset rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ResistorImage"/>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Resistor10kOhmVariant">
+       <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ProductVariant"/>
+        <eco:hasSKU>R10K-01</eco:hasSKU>
+        <eco:hasOfferPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.55</eco:hasOfferPrice>
+        <eco:hasCurrency>USD</eco:hasCurrency>
+        <eco:hasStockQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</eco:hasStockQuantity>
+        <eco:hasSellerProductId>SHE-R10K-A1</eco:hasSellerProductId>
+        <eco:hasOfferState>Active</eco:hasOfferState>
+        <eco:isVariantOfProduct rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Resistor10kOhmProduct"/>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#SidHarveyChannel"/>
+         <eco:availableAtStockLocation rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#MainWarehouse"/>
+     </owl:NamedIndividual>
+
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order987">
+        <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order"/>
+        <eco:hasCustomer rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#CustomerJohnDoe"/>
+        <eco:hasOrderId>ORD987</eco:hasOrderId>
+        <eco:hasOrderDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-05-15T15:00:00Z</eco:hasOrderDate>
+        <eco:hasOrderStatus>Pending</eco:hasOrderStatus>
+        <eco:hasTotalAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.00</eco:hasTotalAmount>
+        <eco:hasShippingAddressDetails rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order987ShippingAddress"/>
+        <eco:hasBillingAddressDetails rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order987BillingAddress"/>
+        <eco:hasPayment rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order987Payment"/>
+        <eco:containsItem rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#OrderLineABC_Order987"/> <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#SidHarveyChannel"/>
+        <eco:isFulfilledBy rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order987Fulfillment"/> <eco:hasSelectedShippingMethod rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#FedExShippingMethodInstance"/> <eco:hasSelectedPaymentMethod rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#InstamojoMethodInstance"/> </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order987ShippingAddress">
+        <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ShippingAddress"/>
+        <eco:hasStreetAddress>123 Main St</eco:hasStreetAddress>
+        <eco:hasCity>Anytown</eco:hasCity>
+        <eco:hasStateProvince>CA</eco:hasStateProvince>
+        <eco:hasPostalCode>91234</eco:hasPostalCode>
+        <eco:hasCountry>USA</eco:hasCountry>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order987BillingAddress">
+        <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BillingAddress"/>
+        <eco:hasStreetAddress>123 Main St</eco:hasStreetAddress>
+        <eco:hasCity>Anytown</eco:hasCity>
+        <eco:hasStateProvince>CA</eco:hasStateProvince>
+        <eco:hasPostalCode>91234</eco:hasPostalCode>
+        <eco:hasCountry>USA</eco:hasCountry>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order987Payment">
+        <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Payment"/>
+        <eco:isPaymentForOrder rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order987"/>
+        <eco:usesPaymentMethod rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#InstamojoMethodInstance"/> <eco:hasPaymentAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.00</eco:hasPaymentAmount>
+        <eco:hasPaymentDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-05-15T15:01:00Z</eco:hasPaymentDate>
+        <eco:hasTransactionId>TXN987654321</eco:hasTransactionId>
+        <eco:hasPaymentStatus>Completed</eco:hasPaymentStatus>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#OrderLineABC_Order987"> <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#OrderLine"/>
+        <eco:isPartOfOrder rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order987"/> <eco:refersToVariant rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Resistor10kOhmVariant"/> <eco:hasQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</eco:hasQuantity> <eco:hasPriceAtTimeOfOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.55</eco:hasPriceAtTimeOfOrder> <eco:hasOrderItemId>OIABC</eco:hasOrderItemId> <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#SidHarveyChannel"/>
+    </owl:NamedIndividual>
+
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order987Fulfillment"> <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Fulfillment"/>
+        <eco:fulfillsOrder rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order987"/> <eco:shipsToAddress rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Order987ShippingAddress"/> <eco:handledByShippingMethod rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#FedExShippingMethodInstance"/> <eco:hasTrackingCode>TRK123456789</eco:hasTrackingCode> <eco:hasShippingDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-05-16T10:00:00Z</eco:hasShippingDate> <eco:hasFulfillmentStatus>Shipped</eco:hasFulfillmentStatus> <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+    </owl:NamedIndividual>
+
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ElectronicsCollection">
+      <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Collection"/>
+       <eco:hasName>Electronics</eco:hasName>
+       <eco:hasSlug>electronics</eco:hasSlug>
+        <eco:hasProduct rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Resistor10kOhmProduct"/>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+         <eco:includesVariant rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Resistor10kOhmVariant"/> </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BrandFacet">
+       <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Facet"/>
+        <eco:hasName>Brand</eco:hasName>
+        <eco:hasSlug>brand</eco:hasSlug>
+        <eco:hasFacetValue rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#SonyFacetValue"/>
+        <eco:hasFacetValue rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#SamsungFacetValue"/>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#SonyFacetValue">
+       <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#FacetValue"/>
+       <eco:hasValue>Sony</eco:hasValue>
+       <eco:hasCode>sony</eco:hasCode>
+        <eco:isValueOfFacet rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BrandFacet"/>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#SamsungFacetValue">
+       <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#FacetValue"/>
+       <eco:hasValue>Samsung</eco:hasValue>
+       <eco:hasCode>samsung</eco:hasCode>
+        <eco:isValueOfFacet rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#BrandFacet"/>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#ResistorImage">
+       <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Asset"/>
+        <eco:hasName>resistor.jpg</eco:hasName>
+        <eco:hasPreview>http://example.com/assets/resistor.jpg</eco:hasPreview>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#MainWarehouse">
+       <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#StockLocation"/>
+       <eco:hasName>Main Warehouse</eco:hasName>
+       <eco:hasCode>MW1</eco:hasCode>
+        <eco:hasStreetAddress>456 Warehouse Way</eco:hasStreetAddress>
+        <eco:hasCity>Industria</eco:hasCity>
+        <eco:hasStateProvince>CA</eco:hasStateProvince>
+        <eco:hasPostalCode>98765</eco:hasPostalCode>
+        <eco:hasCountry>USA</eco:hasCountry>
+         <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#PromotionExample"> <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Promotion"/>
+       <eco:hasName>Summer Sale</eco:hasName>
+       <eco:hasCode>SUMMER2025</eco:hasCode>
+        <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.highwayelectronics.com/ontologies/ecommerce.owl#AdminRole"> <rdf:type rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#Role"/>
+       <eco:hasName>Administrator Role</eco:hasName>
+       <eco:hasCode>administrator-role</eco:hasCode>
+        <eco:belongsToChannel rdf:resource="http://www.highwayelectronics.com/ontologies/ecommerce.owl#DefaultChannel"/>
+     </owl:NamedIndividual>
+
+
+</rdf:RDF>
